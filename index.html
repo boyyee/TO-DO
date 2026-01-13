@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <form onsubmit="return valid()">
+        <h2>To-Do Tugas Uas</h2>
+        <label for="name">NAME :</label>
+        <input type="text" id="name" placeholder="Tambahkan .....">
+
+        <button type="submit">Kirim</button>
+        
+    </form>
+    
+
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+    <script>
+        function valid() {
+            let name = document.getElementById("name").value;
+            if (name === "") {
+                Swal.fire({
+                    title: "Error",
+                    text: "Coba Lagi",
+                    icon: "error"
+                });
+                return false;
+            } else {
+                Swal.fire({
+                    title: "Good job!",
+                    text: "You clicked the button!",
+                    icon: "success"
+                });
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
